@@ -4,7 +4,7 @@ services:
     - docker
 
 before_install:
-    - docker build -t alfredmaboa/Docker-React -f Dockerfile.dev .
+    - docker build -t alfredmaboa -f Dockerfile.dev .
 
 script:
-    - docker run -e CI=true alfredmaboa/Docker-React npm run test
+    - docker run -e CI=true alfredmaboa npm run test
